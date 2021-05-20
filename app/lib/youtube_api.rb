@@ -2,7 +2,7 @@ class YoutubeApi
   BASE_URL = "https://www.googleapis.com/youtube/v3/"
 
   ## Googleから取得したAPIキーを設定する
-  API_KEY = "YOUR_API_KEY"
+  API_KEY = ENV["API_KEY"]
 
   def self.search(search_keyword, page_token = nil)
     client = Faraday.new BASE_URL do |b|
